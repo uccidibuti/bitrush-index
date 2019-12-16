@@ -90,6 +90,9 @@ At this point the main problem is choose the right number of bitmaps for a bitma
 
 For these reasons I have created Bitrush-Index, a Rust library that allow you to create a bitmap-index choosing the bitmap compression method and the number of bitmaps for each index/sub-index, so it's possible create the best bitmap-index on each indexed value for each input distribution. Bitrush-Index provides also a default bitmap index built with [ozbcbitmap] on each possibily signed/unsigned integer (from 8bit to 128bit integer).
 
+[Roaring]: https://github.com/RoaringBitmap/CRoaring
+[EWAH]: https://github.com/lemire/EWAHBoolArray
+
 ### About OZBCbitmap
 I have designed and developed ozbc with the only aim to provide the best bitmap compression method only in the bitmap index scenario, here there is the first c++ version with some benchmark of ozbc, Roaring and EWAH16/32 that I have developed during my University thesis period: [WhyOZBC] .
 
