@@ -1,0 +1,20 @@
+[package]
+name = "bitrush-index"
+version = "0.1.0"
+authors = ["Lorenzo Vannucci <lorenzo@vannucci.io>"]
+edition = "2018"
+license = "GPL-3.0"
+readme = "README.md"
+documentation = "https://docs.rs/bitrush-index/"
+repository = "https://github.com/uccidibuti/bitrush-index"
+
+description = """
+A serializable bitmap index library able to index millions values/sec on a single thread.
+"""
+keywords = ["bitmap", "bitmap-index", "index", "database"]
+categories = ["data-structures", "algorithms"]
+
+[dependencies]
+
+[dev-dependencies]
+rand = "0.7.2"
