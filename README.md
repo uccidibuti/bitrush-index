@@ -1,7 +1,7 @@
 # Bitrush-Index
 Bitrush-Index is a Rust library that provides a serializable bitmap index able to index millions values/sec on a single thread. On default this library build bitmap-index using [ozbcbitmap] but if you want you can also use another compressed/uncrompressed bitmap. Only equality-query (A = X) are supported.
 
-[ozbcbitmap]: ./src/ozbcbitmap/ozbcbitmap.rs
+[ozbcbitmap]: ./src/ozbcbitmap/mod.rs.rs
 
 ## Usage
 Add this to your `Cargo.toml`:
