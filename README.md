@@ -7,7 +7,7 @@ Bitrush-Index is a Rust library that provides a serializable bitmap index able t
 To use bitrush-index in your Rust project add this to your `Cargo.toml`:
 ```toml
 [dependencies]
-bitrush_index = "0.1.0"
+bitrush_index = "0.1.1"
 ```
 See [memory_index](./examples/memory_index.rs) to use a Bitrush-Index in memory mode and [storage_index](./examples/storage_index.rs) to use a Bitrush-Index on persistent memory (storage mode).
 
