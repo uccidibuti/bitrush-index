@@ -35,7 +35,7 @@ fn main() {
     }
     let time_b_index_insert = timer.elapsed();
     println!("Bitmap index created in {:?}.", time_b_index_insert);
-    println!("Insert per second = {}.", N as u128 / time_b_index_insert.as_millis() * 1000);
+    println!("Insert per second = {}.", N / time_b_index_insert.as_millis() as usize * 1000);
     println!("--------------------------------------------------");
 
     let random_index: usize = rng.gen::<usize>() % values.len();
@@ -43,7 +43,7 @@ fn main() {
 
     let timer = Instant::now();
 
-    let values_indexes = match b_index.run_query(val_to_find, None, None) {
+    let values_indexes: Vec<u64> = match b_index.run_query(val_to_find, None, None) {
         Ok(indexes) => indexes,
         Err(err) => panic!("Error occured running looking for value = {}, error: {:?}", val_to_find, err)
     };

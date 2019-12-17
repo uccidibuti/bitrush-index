@@ -4,7 +4,7 @@ Bitrush-Index is a Rust library that provides a serializable bitmap index able t
 [ozbcbitmap]: ./src/ozbcbitmap/mod.rs
 
 ## Usage
-Add this to your `Cargo.toml`:
+To use bitrush-index in your Rust project add this to your `Cargo.toml`:
 ```toml
 [dependencies]
 bitrush_index = "0.1.0"
@@ -63,7 +63,7 @@ fn main() {
     }
     let time_b_index_insert = timer.elapsed();
     println!("Bitmap index created in {:?}.", time_b_index_insert);
-    println!("Insert per second = {}.", N as u128 / time_b_index_insert.as_millis() * 1000);
+    println!("Insert per second = {}.", N / (time_b_index_insert.as_millis() as usize) * 1000);
     println!("--------------------------------------------------");
 
     let random_index: usize = rng.gen::<usize>() % values.len();
@@ -71,7 +71,7 @@ fn main() {
 
     let timer = Instant::now();
 
-    let values_indexes = match b_index.run_query(val_to_find, None, None) {
+    let values_indexes: Vec<u64> = match b_index.run_query(val_to_find, None, None) {
         Ok(indexes) => indexes,
         Err(err) => panic!("Error occured running looking for value = {}, error: {:?}", val_to_find, err)
     };
