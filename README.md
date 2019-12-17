@@ -11,6 +11,18 @@ bitrush_index = "0.1.0"
 ```
 See [memory_index](./examples/memory_index.rs) to use a Bitrush-Index in memory mode and [storage_index](./examples/storage_index.rs) to use a Bitrush-Index on persistent memory (storage mode).
 
+### Run examples
+```
+cargo run --release --example memory_index
+```
+```
+cargo run --release --example storage_index
+```
+
+### Test
+```
+cargo t
+```
 
 ## Example and performance
 ```Rust
