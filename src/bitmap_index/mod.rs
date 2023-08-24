@@ -539,6 +539,14 @@ for <'a> &'a T: BitAnd<&'a T, Output=T> {
         }
         self.write_chunk()
     }
+
+    pub fn memory_bitmaps_size(&self) -> usize {
+        let mut bitmaps_size = 0;
+        for b in &self.bitmaps {
+            bitmaps_size += b.size();
+        }
+        bitmaps_size
+    }
     
     fn write_chunk(&mut self) -> Result<(), Error> {
         let num_bitmaps: usize = self.bitmaps.len();
